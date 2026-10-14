@@ -1,0 +1,11 @@
+{
+  "name": "Jelajah — Smart Travel Companion",
+  "short_name": "Jelajah",
+  "description": "Plan together, travel lighter, keep every trip in your pocket.",
+  "lang": "id",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f8f5",
+  "theme_color": "#176f50"
+}

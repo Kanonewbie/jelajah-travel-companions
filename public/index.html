@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#176f50">
+  <meta name="description" content="Jelajah — Smart Travel Companion. Plan together, travel lighter, keep every trip in your pocket.">
+  <title>Jelajah — Smart Travel Companion</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <div class="app-shell">
+    <aside class="sidebar" id="sidebar" aria-label="Navigasi utama">
+      <a class="brand" href="#dashboard" data-action="navigate" data-view="dashboard">
+        <span class="brand-symbol">✦</span><span class="brand-word">jelajah<span>.</span><small>SMART TRAVEL COMPANION</small></span>
+      </a>
+      <div class="profile-switch"><div class="avatar">R</div><div class="profile-copy"><strong id="sidebar-user">Ravindra D.</strong><small>Explorer · Local demo</small></div><span class="chevron">⌄</span></div>
+      <div class="nav-label">WORKSPACE</div>
+      <nav class="primary-nav">
+        <button class="nav-link active" data-action="navigate" data-view="dashboard"><span class="nav-icon">▦</span><span data-i18n="overview">Ringkasan</span></button>
+        <button class="nav-link" data-action="navigate" data-view="trips"><span class="nav-icon">⌖</span><span data-i18n="trips">Perjalanan saya</span><span class="nav-count" id="trip-count">2</span></button>
+        <button class="nav-link" data-action="navigate" data-view="itinerary"><span class="nav-icon">▤</span><span>Itinerary</span></button>
+        <button class="nav-link" data-action="navigate" data-view="group"><span class="nav-icon">♧</span><span data-i18n="group">Ruang grup</span></button>
+        <button class="nav-link" data-action="navigate" data-view="budget"><span class="nav-icon">◉</span><span data-i18n="budget">Anggaran & split</span></button>
+        <div class="nav-label subnav-label">SAAT PERJALANAN</div>
+        <button class="nav-link" data-action="navigate" data-view="packing"><span class="nav-icon">☷</span><span data-i18n="packing">Daftar barang</span></button>
+        <button class="nav-link" data-action="navigate" data-view="vault"><span class="nav-icon">▣</span><span data-i18n="vault">Brankas luring</span><span class="lock-dot">•</span></button>
+        <button class="nav-link" data-action="navigate" data-view="safety"><span class="nav-icon">✳</span><span data-i18n="safety">Pusat keamanan</span></button>
+      </nav>
+      <div class="sidebar-bottom">
+        <div class="offline-card"><span class="offline-icon">⌁</span><div><strong data-i18n="offline-ready">Siap digunakan luring</strong><p data-i18n="offline-sub">Rencana tersimpan di perangkat ini.</p></div><i id="connection-dot"></i></div>
+        <button class="nav-link muted-link" data-action="navigate" data-view="profile"><span class="nav-icon">⚙</span><span data-i18n="profile">Profil & privasi</span></button>
+        <button class="nav-link muted-link" data-action="toast" data-message="Pusat bantuan akan tersedia pada fase berikutnya."><span class="nav-icon">?</span><span data-i18n="help">Pusat bantuan</span></button>
+        <div class="sidebar-foot">Dibuat untuk perjalanan bermakna <span>♥</span></div>
+      </div>
+    </aside>
+    <div id="mobile-backdrop" class="mobile-backdrop" data-action="close-sidebar"></div>
+    <main class="main-area">
+      <header class="topbar">
+        <div class="topbar-left"><button class="mobile-menu" data-action="toggle-sidebar" aria-label="Buka navigasi">☰</button><div class="breadcrumb"><span>Jelajah</span><span class="crumb-sep">/</span><strong id="page-title">Ringkasan</strong></div></div>
+        <div class="top-actions"><div class="sync-status" id="sync-status"><i></i><span id="sync-label">Tersimpan lokal</span></div><button class="account-button" id="account-button" data-action="account"><span class="account-button-icon">↗</span><b id="account-label">Masuk / Buat akun</b></button><button class="language-btn" data-action="language"><span>文</span><b id="language-label">ID</b></button><button class="icon-button" data-action="toast" data-message="Tidak ada notifikasi baru." aria-label="Notifikasi">♧<i></i></button><button class="top-avatar" data-action="navigate" data-view="profile">R</button></div>
+      </header>
+      <div id="app-view" class="page-view"><div class="loading-state"><div class="loading-logo">j.</div><p>Menyiapkan perjalananmu…</p></div></div>
+      <footer class="page-footer"><span>© 2026 Jelajah Travel Companion</span><span><i class="footer-dot"></i> Offline-first by design</span><span>Privacy comes first <b>♥</b></span></footer>
+    </main>
+  </div>
+  <div id="modal-root"></div><div id="toast-root" aria-live="polite"></div>
+  <noscript><p class="noscript">Jelajah memerlukan JavaScript untuk fitur interaktif.</p></noscript>
+</body>
+</html>
